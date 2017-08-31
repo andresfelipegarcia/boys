@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+/*Route::get('/boys/search',function(){
+    return view('boy.search');
+});*/
+
+Route::get('/boys/search', 'BoyController@search');
+
+Route::resource('boys','BoyController');
+
+Route::resource('observations','ObservationController');
+
+
